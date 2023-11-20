@@ -1,0 +1,68 @@
+    <link rel="stylesheet" href="pembayaran.css">
+<html>
+<head>
+  <title>Contoh Halaman Pembayaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Pilih metode pembayaran</h2>
+  <div class="payment-container">
+    <div class="payment-method">
+      <img src="credit-card.png" alt="Logo Kartu Kredit">
+      <h3>Kartu Kredit</h3>
+      <p>Bayar dengan kartu kredit Anda.</p>
+      <button class="select-payment">Pilih</button>
+      <div class="payment-details hide">
+        <form>
+          <label for="card-number">Nomor Kartu</label>
+          <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+          <label for="card-expiry">Tanggal Kadaluarsa</label>
+          <input type="text" id="card-expiry" name="card-expiry" placeholder="MM / YY">
+          <label for="card-cvv">CVV</label>
+          <input type="text" id="card-cvv" name="card-cvv" placeholder="123">
+          <button type="submit" class="submit-payment">Bayar Sekarang</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="payment-method">
+      <img src="bank-transfer.png" alt="Logo Transfer Bank">
+      <h3>Transfer Bank</h3>
+      <p>Berikan transfer ke rekening kami.</p>
+      <button class="select-payment">Pilih</button>
+      <div class="payment-details hide">
+        <p>Silakan transfer ke rekening berikut:</p>
+        <p>No. Rekening: 1234-5678-9012</p>
+        <p>A/N: PT. ABC</p>
+      </div>
+    </div>
+
+    <div class="payment-method">
+      <img src="paypal.png" alt="Logo PayPal">
+      <h3>PayPal</h3>
+      <p>Bayar dengan akun PayPal Anda.</p>
+      <button class="select-payment">Pilih</button>
+      <div class="payment-details hide">
+        <p>Silakan login ke akun PayPal Anda untuk membayar.</p>
+        <button type="button" class="submit-payment">Login ke PayPal</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const paymentMethodButtons = document.querySelectorAll('.select-payment');
+
+    paymentMethodButtons.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        var paymentDetails = this.nextElementSibling;
+
+        if (paymentDetails.classList.contains('hide')) {
+          paymentDetails.classList.remove('hide');
+        } else {
+          paymentDetails.classList.add('hide');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

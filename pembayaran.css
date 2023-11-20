@@ -1,0 +1,78 @@
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-method {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(33% - 20px);
+  margin-bottom: 20px; /* tambahkan spasi antar elemen */
+}
+
+.payment-method img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.payment-method h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.payment-method p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.select-payment {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.select-payment:hover {
+  background-color: #3e8e41;
+}
+
+.hide {
+  display: none;
+}
+
+form {
+  text-align: left;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.submit-payment {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-payment:hover {
+  background-color: #3e8e41;
+}
